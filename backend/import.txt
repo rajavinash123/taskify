@@ -1,0 +1,27 @@
+
+
+
+login
+http://localhost:3000/
+req
+
+{
+  "email": "avinash@gmail.com",
+  "password": "1234raj"
+}
+
+res
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhMGFlMjBiZjNkZDkzN2MxZjg1YTc0MCIsInJvbGUiOiJtZW1lYnIiLCJpYXQiOjE3NzkxNjc3MjEsImV4cCI6MTc3OTI1NDEyMX0.8X0tY3sFNZF24TfvqeGv-4pVSeI6Cw_3hc7Q_FRUQfk"
+}
+
+
+create task
+api/tasks/create
+{
+  "title": "Build Login API",
+  "description": "JWT authentication system",
+  "assignedTo": "USER_ID",
+  "projectId": "PROJECT_ID",
+  "dueDate": "2026-05-25"
+}
