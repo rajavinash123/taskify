@@ -10,14 +10,13 @@ const authMiddleware=(req,res,next)=>{
     if(!token){
          return res.status(401).json({ message: "No token, access denied" });
     }
- try{
-    const decode=jwt.verify(token,"SECRET_KEY");
-    req.user=decode;
+ try {
+    const decode = jwt.verify(token, process.env.JWT_SECRET || "SECRET_KEY");
+    req.user = decode;
     next();
-
- }catch(err){
-     res.status(401).json({ message: "Invalid token" });
- }
+  } catch (err) {
+    res.status(401).json({ message: "Invalid token" });
+  }
 
 }
 
